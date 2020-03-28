@@ -186,7 +186,7 @@ h4,
 h5,
 h6 {
   color: var(--title-color);
-  font-family: "Netron", sans-serif;
+  font-family: "Netron", "JustFontFenYuanZiTi", sans-serif;
   font-weight: normal;
 }
 
@@ -195,13 +195,20 @@ h1.md-focus:before,
 h2::before,
 h2.md-focus:before,
 h3::before,
-h3.md-focus:before {
+h3.md-focus:before,
+h4::before,
+h4.md-focus:before,
+h5::before,
+h5.md-focus:before,
+h6::before,
+h6.md-focus:before {
   font-size: inherit;
   font-weight: 400;
   text-align: right;
   width: 5ch;
   padding-right: 1ch;
   margin-left: -5ch;
+  top: .357142857rem;
   left: auto;
   color: var(--primary);
   border: none;
@@ -210,7 +217,10 @@ h3.md-focus:before {
 
 h1.md-focus:before,
 h2.md-focus:before,
-h3.md-focus:before {
+h3.md-focus:before,
+h4.md-focus:before,
+h5.md-focus:before,
+h6.md-focus:before {
   color: var(--highlight);
   content: ">";
 }
@@ -226,6 +236,17 @@ h2::before {
 h3::before {
   content: "III";
 }
+h4::before {
+  content: "IV";
+}
+
+h5::before {
+  content: "V";
+}
+
+h6::before {
+  content: "VI";
+}
 
 h3 {
   text-transform: uppercase;
@@ -235,6 +256,17 @@ h5,
 h6 {
   font-weight: bold;
 }
+
+input + h1::before,
+input + h2::before,
+input + h3::before,
+input + h4::before,
+input + h5::before,
+input + h6::before {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 a {
   color: var(--highlight);
@@ -410,6 +442,11 @@ blockquote:before {
 code {
   font-size: 0.9rem;
 }
+pre.ty-contain-cm {
+  border-bottom: 2px solid var(--primary);
+}
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote,
 .cm-s-inner .cm-attribute,
 .cm-s-inner .cm-number,
 .cm-s-inner .cm-variable,
