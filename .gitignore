@@ -4,3 +4,8 @@
 .\#*
 
 .DS_STORE
+
+*
+!README.md
+!zer/*
+!zer*

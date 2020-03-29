@@ -1,6 +1,6 @@
 # ZER
 
-A cyperpunk style theme of Typora.
+A Cyperpunk style theme of Typora.
 
 ----
 
