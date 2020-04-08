@@ -438,7 +438,11 @@ blockquote:before {
 
 /* Code */
 code {
+  background: var(--code-bg);
+  color: var(--primary);
   font-size: 0.9rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
 }
 pre.ty-contain-cm {
   border-bottom: 2px solid var(--primary);
