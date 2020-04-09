@@ -1,0 +1,78 @@
+
+#typora-sidebar
+  font-size 16px
+  line-height 40px
+
+.file-node
+  &-icon,
+  &-open-state
+    line-height 40px
+
+  &-background
+    height 40px
+    overflow hidden
+    &::before
+      background var(--highlight)
+      transform translateX(-100%)
+    &::after
+      bottom 0
+      background var(--primary)
+      transform translateX(100%)
+  
+    &::after,
+    &::before
+      content ""
+      position absolute
+      height 2px
+      width 200%
+      transition transform 0.3s
+    
+  &-content
+    padding-top 0
+    margin-bottom 0
+    box-sizing border-box
+    transition all 0.3s
+
+.file-node-collapsed,
+.file-library-file-node
+  &:hover .file-node-background
+    &::before
+      background var(--primary)
+      transform translateX(100%)
+    &::after
+      background var(--highlight)
+      transform translateX(-100%)
+
+.file-node-collapsed,
+.file-library-file-node
+  &:hover
+    .file-node-background
+      border-color var(--highlight)
+    .file-node-content
+      color var(--highlight)
+
+.file-library-node
+  &:not(.file-node-root):focus
+    & > .file-node-content
+      outline none
+  &.file-tree-node[data-is-directory="true"]
+    & > .file-node-content
+      color var(--folder)
+
+      
+.file-list-item-summary
+  height 36px
+  margin-top 8px
+
+.file-list-item
+  padding-top 16px
+  padding-bottom 16px
+  
+.sidebar-footer,
+.sidebar-osx-tab
+  color var(--primary)
+
+.footer-item:hover,
+.sidebar-footer-item:hover
+  color var(--highlight)
+  background inherit

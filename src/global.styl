@@ -1,0 +1,156 @@
+html
+  font-family "JustFontFenYuanZiTi", sans-serif
+  font-size 18px
+  -webkit-font-smoothing antialiased
+
+html,
+body
+  background-color #20282f !important
+  color var(--text-color)
+
+::-webkit-scrollbar
+  width 6px
+  height 6px
+  padding 10px
+  margin 10px
+  background-color var(--scroll-bg-color)
+
+::-webkit-scrollbar-track
+  background-color var(--scroll-bg-color)
+
+::-webkit-scrollbar-thumb
+  background-color var(--scroll-track-color)
+  border-radius 10px
+
+::-webkit-scrollbar-corner
+  background-color var(--scroll-bg-color)
+
+.CodeMirror-selected,
+.CodeMirror-selectedtext,
+::selection
+  color var(--white)!important
+  background var(--highlight)!important
+
+.md-toc-inner
+  &:before
+    content "- "
+
+pre,
+pre.md-meta-block,
+.md-fences
+  background-color var(--code-bg)
+  padding-left 8px
+  padding-right 8px
+
+#write
+  line-height 1.5
+  padding-left 60px
+  padding-right 60px
+  max-width 800px
+  & > blockquote
+    &:after
+      content no-close-quote
+
+ul
+  list-style-type square
+
+ol
+  list-style-type upper-roman
+
+hr
+  border-color var(--primary)
+
+h1
+  font-size 2.4rem
+  &::before
+    content "I"
+
+h2
+  font-weight 600
+  &::before
+    content "II"
+
+h3
+  font-size 1.4rem
+  text-transform uppercase
+  &::before
+    content "III"
+
+h4
+  &::before
+    content "IV"
+
+h5
+  &::before
+    content "V"
+
+h6
+  &::before
+    content "VI"
+
+h5,
+h6
+  font-weight bold
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color var(--title-color)
+  font-family "Netron", "JustFontFenYuanZiTi", sans-serif
+  font-weight normal
+  &::before,
+  &.md-focus:before
+    font-size inherit
+    font-weight 400
+    text-align right
+    width 5ch
+    padding-right 1ch
+    margin-left -5ch
+    top 0.357142857rem
+    left auto
+    color var(--primary)
+    border none
+    display inline-block
+
+  &.md-focus:before
+    color var(--highlight)
+    content ">"
+
+li
+  h1, h2, h3, h4, h5, h6
+    &::before
+      opacity: 0
+    
+input + h1::before,
+input + h2::before,
+input + h3::before,
+input + h4::before,
+input + h5::before,
+input + h6::before
+  opacity 0
+  pointer-events none
+
+a
+  color var(--highlight)
+
+[md-inline]
+  a
+    color var(--highlight)
+    text-decoration none
+    padding 4px
+    border-radius 4px
+    font-size 0.9rem
+
+td
+  border 1px solid #666
+  background-color #858585
+  padding-left 8px
+  background transparent
+
+th
+  font-weight 400
+  text-align center
+  color var(--title-color)

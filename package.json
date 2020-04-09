@@ -1,0 +1,35 @@
+{
+  "name": "zer-typora-theme",
+  "version": "0.0.1",
+  "description": "A Cyperpunk Typora theme.",
+  "main": "zer.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production && rm zer.js",
+    "dev": "npm run build && npm run deploy",
+    "deploy": "./scripts/deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ariussssss/typora-theme-zer.git"
+  },
+  "keywords": [
+    "CSS"
+  ],
+  "author": "Ariussss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ariussssss/typora-theme-zer/issues"
+  },
+  "homepage": "https://github.com/Ariussssss/typora-theme-zer#readme",
+  "devDependencies": {
+    "css-loader": "^3.5.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "style-loader": "^1.1.3",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}

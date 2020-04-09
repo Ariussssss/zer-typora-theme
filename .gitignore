@@ -4,8 +4,4 @@
 .\#*
 
 .DS_STORE
-
-*
-!README.md
-!zer/*
-!zer*
+node_modules

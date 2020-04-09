@@ -1,0 +1,44 @@
+.md-fences
+  .CodeMirror
+    &.CodeMirror-wrap
+      padding-top 8px
+      padding-bottom 8px
+
+.CodeMirror-gutters
+  border-right none
+
+code
+  font-size 0.9rem
+
+pre
+  &.ty-contain-cm
+    border-bottom 2px solid var(--primary)
+
+.cm-s-inner
+  .cm-quote,
+  .cm-attribute,
+  .cm-number,
+  .cm-variable,
+  .cm-variable-2
+  &.cm-quote
+    color var(--code-variable)
+  .cm
+    &-tag,
+    &-property
+      color var(--code-property)
+    &-keyword
+      color var(--code-key-word)
+    &-def
+      color var(--code-def)
+    &-operator
+      color var(--code-operator)
+    &-comment
+      color var(--code-comment)
+
+    &-builtin,
+    &-atom
+      color var(--code-atom)
+
+    &-string-2,
+    &-string
+      color var(--code-string)

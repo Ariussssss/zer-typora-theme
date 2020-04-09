@@ -1,0 +1,120 @@
+@import "./variable.styl"
+@import "./global.styl"
+@import "./icon.styl"
+@import "./code.styl"
+@import "./sidebar.styl"
+
+
+blockquote
+  margin 1.5em 10px
+  padding 0.5em 10px
+  position relative
+  text-align left
+  font 16px/24px Arial, sans-serif
+  border-radius 4px
+  color var(--white)
+  box-shadow 0 0 4px 0 var(--primary)
+  padding 0.5em 10px
+  padding-left 24px
+  &:before
+    content ">"
+    position absolute
+    color var(--primary)
+    border 1px solid var(--primary)
+    background var(--code-bg)
+    font-size 12pt
+    text-align center
+    line-height 24px
+    float left
+    border-radius 2px
+    left -10px
+    vertical-align -0.4em
+    display block
+    height 25px
+    width 25px
+    font-style normal
+    transition all 350ms
+    -o-transition all 350ms
+    -moz-transition all 350ms
+    -webkit-transition all 350ms
+
+.task-list-item
+  input
+    width 1.25rem
+    height 1.25rem
+    display block
+    -webkit-appearance initial
+    background transparent
+    top -2px
+    left -18px
+    &:focus
+      outline none
+      box-shadow none
+    &:before
+      border 1px solid var(--white)
+      border-radius 1.2rem
+      width 1.2rem
+      height 1.2rem
+      background transparent
+      content " "
+      transition background-color 200ms ease-in-out
+      display block
+    &:after
+      opacity 1
+      -webkit-transition opacity 0.05s ease-in-out
+      -moz-transition opacity 0.05s ease-in-out
+      transition opacity 0.05s ease-in-out
+      -webkit-transform rotate(-45deg)
+      -moz-transform rotate(-45deg)
+      transform rotate(-45deg)
+      position absolute
+      top 0.325rem
+      left 0.28125rem
+      width 0.6375rem
+      height 0.4rem
+      border 3px solid var(--highlight)
+      border-top 0
+      border-right 0
+      content " "
+      opacity 0
+
+.task-list-item input:checked:before,
+.task-list-item input[checked]:before
+  border-color var(--highlight)
+  border-width 2px
+  display inline-block
+  transition background-color 200ms ease-in-out
+
+.task-list-item input:checked:after,
+.task-list-item input[checked]:after
+  opacity 1
+
+.megamenu-menu
+  background-color var(--side-bar-bg-color)
+
+.megamenu-menu-header
+  border-bottom 0
+
+.megamenu-opened
+  header
+    background transparent
+
+#m-import-local
+  &:hover
+    .preference-item-hint
+      color var(--item-hover-text-color)
+
+.megamenu-menu-panel
+  tbody
+    tr
+      &:hover
+        td
+          &:nth-child(1)
+            color var(--item-hover-text-color)
+  table
+    td
+      &:nth-child(1)
+        color var(--text-color)
+
+#recent-file-panel
+  color var(--blur-text-color)

@@ -1,0 +1,70 @@
+@font-face
+  font-family "Netron"
+  font-style normal
+  font-weight 400
+  src url("icon/Netron-2.woff") format("woff")
+
+@font-face
+  font-family "JustFontFenYuanZiTi"
+  font-style normal
+  font-weight 400
+  src url("icon/JustFontFenYuanZiTi-2.woff") format("woff")
+
+@font-face
+  font-family "zer-icon"
+  src url("icon/iconfont.woff?t=1585400469360") format("woff")
+
+.fa
+  font-family "zer-icon" !important
+  font-size 16px
+  font-style normal
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+.icon-focus-off
+  &:before
+    content "\e602"
+
+.fa-folder
+  &:before
+    font-family "zer-icon" !important
+    content "\e641"
+
+.active
+  .fa-file-text-o
+    &:before
+      content "\e7af"
+
+.fa-file-text-o
+  &:before
+    content "\e602"
+
+.file-node-expanded
+  & > .file-node-content
+    color var(--primary)
+    .fa-caret-down
+      display none
+    .fa-caret-right
+      display inline-block
+      transform rotate(90deg)
+      transition all 0.3s
+  .fa-caret-down
+    &:before
+      content "\e95c"
+  & > .file-node-children
+    margin-bottom 10px
+    .file-node-background
+      background var(--code-bg)
+    &::after
+      content ""
+      position absolute
+      left 0
+      width 100%
+      height 10px
+      background linear-gradient(var(--code-bg) 70%, var(--primary))
+  & > .file-node-background
+    background linear-gradient(var(--primary), var(--code-bg) 10%)
+
+.fa-caret-right
+  &:before
+    content "\e95c"
