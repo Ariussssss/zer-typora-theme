@@ -1,5 +1,5 @@
 {
-  "name": "zer-typora-theme",
+  "name": "@ariussss/zer-typora-theme",
   "version": "0.0.1",
   "description": "A Cyperpunk Typora theme.",
   "main": "zer.css",
@@ -15,6 +15,10 @@
   },
   "keywords": [
     "CSS"
+  ],
+  "files": [
+    "zer.css",
+    "demo"
   ],
   "author": "Ariussss",
   "license": "ISC",
